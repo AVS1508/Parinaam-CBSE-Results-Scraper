@@ -9,6 +9,24 @@ Text = 'Result Not Found'
 #Alphabet dictionary for brute-force attacking student's initial and mother's initial 
 Alphabet=('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z')
 
+#Versions of results
+Original = 'http://cbseresults.nic.in/class12/Class12th19.htm'
+Revised = 'http://cbseresults.nic.in/class12-Revised/Class12th19_revised.htm'
+Compartment = 'http://cbseresults.nic.in/class12-Compt/Class12th19_Compt.htm'
+
+#Input the Results Version
+print("Enter the version of results to be scraped")
+print("Original(O)  Revised(R)  Compartment(C)")
+VersionFlag = input()
+
+#Checking and updating version
+if VersionFlag == 'O':
+    Version = Original
+elif VersionFlag == 'R':
+    Version = Revised
+elif VersionFlag == 'C':
+    Version = Compartment
+    
 #Input School and Centre Credentials
 print("Enter school number: ")
 SchoolNo = input()
@@ -52,7 +70,7 @@ if RollFlag == 'Y':
     if StdFlag == 'Y' and MotFlag == 'Y':
         AdmitId = StdName + MotName + str(int(RollNum)%100).zfill(2) + str(SchoolNo)[:2] + str(int(CentreNo)%100)
                                                                            
-        browser.get(('http://cbseresults.nic.in/class12-Revised/Class12th19_revised.htm'))
+        browser.get((Version))
                                                                            
         regno = browser.find_element_by_name('regno')
         regno.send_keys(RollNum)
@@ -73,7 +91,7 @@ if RollFlag == 'Y':
         for alp in Alphabet:
             AdmitId = alp + MotName + str(int(RollNum)%100).zfill(2) + str(SchoolNo)[:2] + str(int(CentreNo)%100)
             
-            browser.get(('http://cbseresults.nic.in/class12-Revised/Class12th19_revised.htm'))
+            browser.get((Version))
 
             regno = browser.find_element_by_name('regno')
             regno.send_keys(RollNum)
@@ -94,7 +112,7 @@ if RollFlag == 'Y':
         for alp in Alphabet:
             AdmitId = StdName + alp + str(int(RollNum)%100).zfill(2) + str(SchoolNo)[:2] + str(int(CentreNo)%100)
             
-            browser.get(('http://cbseresults.nic.in/class12-Revised/Class12th19_revised.htm'))
+            browser.get((Version))
             
             regno = browser.find_element_by_name('regno')
             regno.send_keys(RollNum)
@@ -116,7 +134,7 @@ if RollFlag == 'Y':
             for bet in Alphabet:
                 AdmitId = alp + bet + str(int(RollNum)%100).zfill(2) + str(SchoolNo)[:2] + str(int(CentreNo)%100)
 
-                browser.get(('http://cbseresults.nic.in/class12-Revised/Class12th19_revised.htm'))
+                browser.get((Version))
 
                 regno = browser.find_element_by_name('regno')
                 regno.send_keys(RollNum)
@@ -141,7 +159,7 @@ else:
             VarRollNum = LowRollNum + i
             AdmitId = StdName + MotName + str(int(VarRollNum)%100).zfill(2) + str(SchoolNo)[:2] + str(int(CentreNo)%100)
 
-            browser.get(('http://cbseresults.nic.in/class12-Revised/Class12th19_revised.htm'))
+            browser.get((Version))
 
             regno = browser.find_element_by_name('regno')
             regno.send_keys(RollNum)
@@ -164,7 +182,7 @@ else:
                 VarRollNum = LowRollNum + i
                 AdmitId = alp + MotName + str(int(VarRollNum)%100).zfill(2) + str(SchoolNo)[:2] + str(int(CentreNo)%100)
 
-                browser.get(('http://cbseresults.nic.in/class12-Revised/Class12th19_revised.htm'))
+                browser.get((Version))
 
                 regno = browser.find_element_by_name('regno')
                 regno.send_keys(RollNum)
@@ -187,7 +205,7 @@ else:
                 VarRollNum = LowRollNum + i
                 AdmitId = StdName + alp + str(int(VarRollNum)%100).zfill(2) + str(SchoolNo)[:2] + str(int(CentreNo)%100)
 
-                browser.get(('http://cbseresults.nic.in/class12-Revised/Class12th19_revised.htm'))
+                browser.get((Version))
 
                 regno = browser.find_element_by_name('regno')
                 regno.send_keys(RollNum)
@@ -211,7 +229,7 @@ else:
                     VarRollNum = LowRollNum + i
                     AdmitId = alp + bet + str(int(VarRollNum)%100).zfill(2) + str(SchoolNo)[:2] + str(int(CentreNo)%100)
 
-                    browser.get(('http://cbseresults.nic.in/class12-Revised/Class12th19_revised.htm'))
+                    browser.get((Version))
 
                     regno = browser.find_element_by_name('regno')
                     regno.send_keys(RollNum)
