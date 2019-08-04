@@ -19,11 +19,13 @@ You may have to use superuser mode to install Selenium. For example:
 ## Usage
 After setting up the dependencies, run the mainScript.py. 
 <br/><br/>
-<strong>Step 1:</strong> Enter the targeted school number and centre number.
+<strong>Step 1:</strong> Choose which result you want to check.
 <br/><br/>
-<strong>Step 2:</strong> Enter the student-specific details (student's initial and mother's initial), whichever ones you know. If you don't know any one or both, they will be bruteforced with a loop on an alphabet dictionary.
+<strong>Step 2:</strong> Enter the targeted school number and centre number.
 <br/><br/>
-<strong>Step 3:</strong> If known, enter the student's roll number. Else, enter a range to test against with a loop.
+<strong>Step 3:</strong> Enter the student-specific details (student's initial and mother's initial), whichever ones you know. If you don't know any one or both, they will be bruteforced with a loop on an alphabet dictionary.
+<br/><br/>
+<strong>Step 4:</strong> If known, enter the student's roll number. Else, enter a range to test against with a loop.
 <br/><br/>
 <em>NOTE: Not knowing the above three credentials will usually create time-consuming nested loops which might even provide unexpected results of students other than the targeted one. </em>
 
