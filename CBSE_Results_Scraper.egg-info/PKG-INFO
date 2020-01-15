@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: CBSE-Results-Scraper
+Version: 1.2.9
+Summary: CBSE-Results-Scraper is a command-line Python application that scrapes and downloads student reports of CBSE (Central Board of Secondary Education) Class XII Results 2019 from http://cbseresults.nic.in.
+Home-page: https://github.com/AVS1508/CBSE-Results-Scraper
+Author: Aditya Vikram Singh
+Author-email: avsingh@umass.edu
+License: Public Domain
+Download-URL: https://github.com/AVS1508/CBSE-Results-Scraper/archive/master.zip
+Description: UNKNOWN
+Keywords: cbse,results,scraper,download
+Platform: UNKNOWN

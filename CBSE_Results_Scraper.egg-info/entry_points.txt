@@ -1,0 +1,3 @@
+[console_scripts]
+CBSE-Results-Scraper = cbse_results_scraper.app:main
+

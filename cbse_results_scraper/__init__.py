@@ -1,0 +1,1 @@
+from cbse_results_scraper.app import CBSEResultsScraper

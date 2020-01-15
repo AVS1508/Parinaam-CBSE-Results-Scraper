@@ -1,0 +1,13 @@
+README.md
+setup.cfg
+setup.py
+CBSE_Results_Scraper.egg-info/PKG-INFO
+CBSE_Results_Scraper.egg-info/SOURCES.txt
+CBSE_Results_Scraper.egg-info/dependency_links.txt
+CBSE_Results_Scraper.egg-info/entry_points.txt
+CBSE_Results_Scraper.egg-info/not-zip-safe
+CBSE_Results_Scraper.egg-info/requires.txt
+CBSE_Results_Scraper.egg-info/top_level.txt
+cbse_results_scraper/__init__.py
+cbse_results_scraper/app.py
+cbse_results_scraper/constants.py
