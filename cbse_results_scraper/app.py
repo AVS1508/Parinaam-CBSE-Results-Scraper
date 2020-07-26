@@ -149,27 +149,7 @@ def main():
                 + str(int(CentreNo) % 100)
             )
             
-            # Opens a browser window
-            browser = webdriver.Chrome(executable_path= chromedriverpath)
-            browser.get((Version))
-
-            regno = browser.find_element_by_name("regno")
-            regno.send_keys(RollNum)
-            sch = browser.find_element_by_name("sch")
-            sch.send_keys(SchoolNo)
-            cno = browser.find_element_by_name("cno")
-            cno.send_keys(CentreNo)
-            admid = browser.find_element_by_name("admid")
-            admid.send_keys(AdmitId)
-            submitButton = browser.find_element_by_name("B2")
-            submitButton.click()
-
-            if Text not in browser.page_source:
-                print("Found the report card of "+ RollNum + "!")
-                browser.save_screenshot(results_path+ "/" + RollNum + " Report.png")
-                
-            # Closes browser window
-            browser.close()
+            browserSearch(Version, RollNum, SchoolNo, CentreNo, AdmitId, Text)
 
         # Checks report if student's initial is unknown and mother's initial is known
         elif not knowStudentName and knowMotherName:
@@ -185,27 +165,7 @@ def main():
                     + str(int(CentreNo) % 100)
                 )
 
-                # Opens a browser window
-                browser = webdriver.Chrome(executable_path= chromedriverpath)
-                browser.get((Version))
-
-                regno = browser.find_element_by_name("regno")
-                regno.send_keys(RollNum)
-                sch = browser.find_element_by_name("sch")
-                sch.send_keys(SchoolNo)
-                cno = browser.find_element_by_name("cno")
-                cno.send_keys(CentreNo)
-                admid = browser.find_element_by_name("admid")
-                admid.send_keys(AdmitId)
-                submitButton = browser.find_element_by_name("B2")
-                submitButton.click()
-
-                if Text not in browser.page_source:
-                    print("Found the report card of "+ RollNum + "!")
-                    browser.save_screenshot(results_path+ "/" + RollNum + " Report.png")
-                    
-                # Closes browser window
-                browser.close()
+                browserSearch(Version, RollNum, SchoolNo, CentreNo, AdmitId, Text)
 
         # Checks report if student's initial is known and mother's initial is unknown
         elif knowStudentName and not knowMotherName:
@@ -221,27 +181,7 @@ def main():
                     + str(int(CentreNo) % 100)
                 )
 
-                # Opens a browser window
-                browser = webdriver.Chrome(executable_path= chromedriverpath)
-                browser.get((Version))
-
-                regno = browser.find_element_by_name("regno")
-                regno.send_keys(RollNum)
-                sch = browser.find_element_by_name("sch")
-                sch.send_keys(SchoolNo)
-                cno = browser.find_element_by_name("cno")
-                cno.send_keys(CentreNo)
-                admid = browser.find_element_by_name("admid")
-                admid.send_keys(AdmitId)
-                submitButton = browser.find_element_by_name("B2")
-                submitButton.click()
-
-                if Text not in browser.page_source:
-                    print("Found the report card of "+ RollNum + "!")
-                    browser.save_screenshot(results_path+ "/" + RollNum + " Report.png")
-                    
-                # Closes browser window
-                browser.close()
+                browserSearch(Version, RollNum, SchoolNo, CentreNo, AdmitId, Text)
 
         # Checks report if student's initial and mother's initial are unknown
         elif not knowStudentName and not knowMotherName:
@@ -256,27 +196,7 @@ def main():
                         + str(int(CentreNo) % 100)
                     )
 
-                    # Opens a browser window
-                    browser = webdriver.Chrome(executable_path= chromedriverpath)
-                    browser.get((Version))
-
-                    regno = browser.find_element_by_name("regno")
-                    regno.send_keys(RollNum)
-                    sch = browser.find_element_by_name("sch")
-                    sch.send_keys(SchoolNo)
-                    cno = browser.find_element_by_name("cno")
-                    cno.send_keys(CentreNo)
-                    admid = browser.find_element_by_name("admid")
-                    admid.send_keys(AdmitId)
-                    submitButton = browser.find_element_by_name("B2")
-                    submitButton.click()
-
-                    if Text not in browser.page_source:
-                        print("Found the report card of "+ RollNum + "!")
-                        browser.save_screenshot(results_path+ "/" + RollNum + " Report.png")
-                        
-                    # Closes browser window
-                    browser.close()
+                    browserSearch(Version, RollNum, SchoolNo, CentreNo, AdmitId, Text)
 
     # Checks report if roll number is unknown
     else:
@@ -301,27 +221,7 @@ def main():
                     + str(int(CentreNo) % 100)
                 )
 
-                # Opens a browser window
-                browser = webdriver.Chrome(executable_path= chromedriverpath)
-                browser.get((Version))
-
-                regno = browser.find_element_by_name("regno")
-                regno.send_keys(RollNum)
-                sch = browser.find_element_by_name("sch")
-                sch.send_keys(SchoolNo)
-                cno = browser.find_element_by_name("cno")
-                cno.send_keys(CentreNo)
-                admid = browser.find_element_by_name("admid")
-                admid.send_keys(AdmitId)
-                submitButton = browser.find_element_by_name("B2")
-                submitButton.click()
-
-                if Text not in browser.page_source:
-                    print("Found the report card of "+ VarRollNum + "!")
-                    browser.save_screenshot(results_path+ "/" + VarRollNum + " Report.png")
-                    
-                # Closes browser window
-                browser.close()
+                browserSearch(Version, RollNum, SchoolNo, CentreNo, AdmitId, Text)
 
         # Checks report if student's initial is unknown and mother's initial is known
         elif not knowStudentName and knowMotherName:
@@ -339,27 +239,7 @@ def main():
                         + str(int(CentreNo) % 100)
                     )
 
-                    # Opens a browser window
-                    browser = webdriver.Chrome(executable_path= chromedriverpath)
-                    browser.get((Version))
-
-                    regno = browser.find_element_by_name("regno")
-                    regno.send_keys(RollNum)
-                    sch = browser.find_element_by_name("sch")
-                    sch.send_keys(SchoolNo)
-                    cno = browser.find_element_by_name("cno")
-                    cno.send_keys(CentreNo)
-                    admid = browser.find_element_by_name("admid")
-                    admid.send_keys(AdmitId)
-                    submitButton = browser.find_element_by_name("B2")
-                    submitButton.click()
-
-                    if Text not in browser.page_source:
-                        print("Found the report card of "+ VarRollNum + "!")
-                        browser.save_screenshot(results_path+ "/" + VarRollNum + " Report.png")
-
-                    # Closes browser window
-                    browser.close()
+                    browserSearch(Version, RollNum, SchoolNo, CentreNo, AdmitId, Text)
                     
         # Checks report if student's initial is known and mother's initial is unknown
         elif knowStudentName and not knowMotherName:
@@ -377,27 +257,7 @@ def main():
                         + str(int(CentreNo) % 100)
                     )
 
-                    # Opens a browser window
-                    browser = webdriver.Chrome(executable_path= chromedriverpath)
-                    browser.get((Version))
-
-                    regno = browser.find_element_by_name("regno")
-                    regno.send_keys(RollNum)
-                    sch = browser.find_element_by_name("sch")
-                    sch.send_keys(SchoolNo)
-                    cno = browser.find_element_by_name("cno")
-                    cno.send_keys(CentreNo)
-                    admid = browser.find_element_by_name("admid")
-                    admid.send_keys(AdmitId)
-                    submitButton = browser.find_element_by_name("B2")
-                    submitButton.click()
-
-                    if Text not in browser.page_source:
-                        print("Found the report card of "+ VarRollNum + "!")
-                        browser.save_screenshot(results_path+ "/" + VarRollNum + " Report.png")
-                        
-                    # Closes browser window
-                    browser.close()
+                    browserSearch(Version, RollNum, SchoolNo, CentreNo, AdmitId, Text)
 
         # Checks report if student's initial and mother's initial are unknown
         elif not knowStudentName and not knowMotherName:
@@ -414,27 +274,30 @@ def main():
                             + str(int(CentreNo) % 100)
                         )
 
-                        # Opens a browser window
-                        browser = webdriver.Chrome(executable_path= chromedriverpath)
-                        browser.get((Version))
-
-                        regno = browser.find_element_by_name("regno")
-                        regno.send_keys(RollNum)
-                        sch = browser.find_element_by_name("sch")
-                        sch.send_keys(SchoolNo)
-                        cno = browser.find_element_by_name("cno")
-                        cno.send_keys(CentreNo)
-                        admid = browser.find_element_by_name("admid")
-                        admid.send_keys(AdmitId)
-                        submitButton = browser.find_element_by_name("B2")
-                        submitButton.click()
-
-                        if Text not in browser.page_source:
-                            print("Found the report card of "+ VarRollNum + "!")
-                            browser.save_screenshot(results_path+ "/" + VarRollNum + " Report.png")
+                        browserSearch(Version, RollNum, SchoolNo, CentreNo, AdmitId, Text) 
                         
-                        # Closes browser window
-                        browser.close()  
-                        
+def browserSearch(paramVersion, paramRollNum, paramSchoolNo, paramCentreNo, paramAdmitId, paramText):
+    # Opens a browser window
+    browser = webdriver.Chrome(executable_path=chromedriverpath)
+    browser.get((paramVersion))
+
+    regno = browser.find_element_by_name("regno")
+    regno.send_keys(paramRollNum)
+    sch = browser.find_element_by_name("sch")
+    sch.send_keys(paramSchoolNo)
+    cno = browser.find_element_by_name("cno")
+    cno.send_keys(paramCentreNo)
+    admid = browser.find_element_by_name("admid")
+    admid.send_keys(paramAdmitId)
+    submitButton = browser.find_element_by_name("B2")
+    submitButton.click()
+
+    if paramText not in browser.page_source:
+        print("Found the report card of "+ paramRollNum + "!")
+        browser.save_screenshot(results_path+ "/" + paramRollNum + " Report.png")
+        
+    # Closes browser window
+    browser.close()
+
 if __name__ == '__main__' :
     main()
