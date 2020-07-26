@@ -1,7 +1,8 @@
-import os, sys
+import os
+import sys
 from selenium import webdriver
 
-from cbse_results_scraper.constants import * 
+from cbse_results_scraper.constants import Text, Alphabet, Original, Revised, Compartment 
 
 # Executable path of chromedriver
 chromedriverpath = os.path.normpath(os.path.abspath(__file__) + os.sep + os.pardir) + "/data/chromedriver"
@@ -44,9 +45,8 @@ class CBSEResultsScraper():
         
         if SchoolNo.isdigit():
             return SchoolNo
-        else:
-            print("Invalid Input")
-            sys.exit()
+        print("Invalid Input")
+        sys.exit()
 
     def centreCredential() :
         print("Enter the centre number: ")
@@ -54,9 +54,8 @@ class CBSEResultsScraper():
         
         if CentreNo.isdigit():
             return CentreNo
-        else:
-            print("Invalid Input")
-            sys.exit()
+        print("Invalid Input")
+        sys.exit()
     
     def knowStudentName():
         
@@ -100,9 +99,8 @@ class CBSEResultsScraper():
             
             if RollNum.isdigit():
                 return RollNum
-            else:
-                print("Invalid Input")
-                sys.exit()
+            print("Invalid Input")
+            sys.exit()
             
     def multipleRollNumberCredential():
         
